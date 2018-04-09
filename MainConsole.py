@@ -19,6 +19,8 @@ def process1(sheetT):
         totalPopulation = sheetT.cell(row=3,column=2).value
         male_workforce_total = 0
         female_workforce_total = 0
+        maleTotalPopulation = sheetT.cell(row=3,column=3).value
+        femaleTotalPopulation = sheetT.cell(row=3,column=4).value
 
         print("!!!MALE!!! data below")
         for x in range(4, 22):
@@ -39,16 +41,59 @@ def process1(sheetT):
 
         total_male_workforce_percentage = male_workforce_total/totalPopulation
         total_female_workforce_percentage = female_workforce_total / totalPopulation
+
+        total_male_workforce_percentage_inM = male_workforce_total / maleTotalPopulation
+        total_female_workforce_percentage_inF = female_workforce_total / femaleTotalPopulation
+
         print("-----------------------------------------------------------------")
         printf("Male workforce total's percentage in total population is: %f \n", total_male_workforce_percentage)
         print("-----------------------------------------------------------------")
         printf("Female workforce total's percentage in total population is: %f\n", total_female_workforce_percentage)
+        print("-----------------------------------------------------------------")
+        printf("Together they are: %f \n", total_male_workforce_percentage + total_male_workforce_percentage)
+        print("-----------------------------------------------------------------")
+        printf("based on the data, the percentage of female that chooses to work is %f \n", total_female_workforce_percentage_inF)
+        printf("based on the data, the percentage of male that chooses to work is %f \n", total_male_workforce_percentage_inM)
 
-        femaleOverTotalPop = sheetT.cell(row=3, column=3).value / totalPopulation
+        femaleOverTotalPop = sheetT.cell(row=3, column=4).value / totalPopulation
         maleOverTotalPop = 1-femaleOverTotalPop
         printf("just for the information: female percentage in total population is: %f And for male is: %f \n", femaleOverTotalPop, maleOverTotalPop)
 
+        # some interesting comparison might be find the workfoce percentage of foreigner pop in singapore and compare with the locals
+        # i will use the PR population to compare with the Citizen first
+        # some interesting finding, the tot
+        PR_male_workforce_total = 0
+        PR_female_workforce_total = 0
+        PR_totalPopulation = sheetT.cell(row=47, column=2).value
+        PR_maleTotalPopulation = sheetT.cell(row=47, column=3).value
+        PR_femaleTotalPopulation = sheetT.cell(row=47, column=4).value
+        for x in range(52,65-6): # x need to start form 7, ends at 22-6
+            PR_male_workforce_total += sheetT.cell(row=x, column=3).value
+        for x in range(52,65-6): # x need to start form 7, ends at 22-6
+            PR_female_workforce_total += sheetT.cell(row=x, column=4).value
+        PR_total_male_workforce_percentage = PR_male_workforce_total / PR_totalPopulation
+        PR_total_female_workforce_percentage = PR_female_workforce_total / PR_totalPopulation
+        print("-----------------------------------------------------------------")
+        printf("PR Male workforce total's percentage in PR total population is: %f \n", PR_total_male_workforce_percentage)
+        print("-----------------------------------------------------------------")
+        printf("PR Female workforce total's percentage in PR total population is: %f\n", PR_total_female_workforce_percentage)
+        print("-----------------------------------------------------------------")
+        printf("Together they are: %f \n", PR_total_male_workforce_percentage + PR_total_male_workforce_percentage)
+        print("-----------------------------------------------------------------")
+        # in the case of PR, the male to choose to work, and the female that chooses to work
+        PR_total_male_workforce_percentage_inM = PR_male_workforce_total / PR_maleTotalPopulation
+        PR_total_female_workforce_percentage_inF = PR_female_workforce_total / PR_femaleTotalPopulation
+        printf("based on the data, the percentage of female PR that chooses to work is %f \n", PR_total_female_workforce_percentage_inF)
+        printf("based on the data, the percentage of male PR that chooses to work is %f \n", PR_total_male_workforce_percentage_inM)
+        # got some interesting finding, the PR work percentage is much higher 5% ish.
+        # and there are more female PR choose to work 2%
+        print("-----------------------------------------------------------------")
+        PR_femaleOverTotalPR = sheetT.cell(row=47, column=4).value / PR_totalPopulation
+        PR_maleOverTotalPR = 1-PR_femaleOverTotalPR
+        printf("just for the information: PR female percentage in total PR population is: %f And for PR male is: %f \n",PR_femaleOverTotalPR, PR_maleOverTotalPR)
+        print("-----------------------------------------------------------------")
 
+###########################################################################
 # print helper
 def printf(format, *args):
     sys.stdout.write(format % args)
