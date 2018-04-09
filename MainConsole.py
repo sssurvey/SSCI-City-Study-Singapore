@@ -26,7 +26,7 @@ def process1(sheetT):
         for x in range(4, 22):
             percentage = float((sheetT.cell(row=x, column=3).value)/totalPopulation)
             printf('age group is: %s, percentage of male in total population is: %f \n', sheetT.cell(row=x, column=1).value, percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         print("!!!FEMALE!!! data below")
         for x in range(4, 22):
             percentage = float((sheetT.cell(row=x, column=4).value)/totalPopulation)
@@ -45,13 +45,13 @@ def process1(sheetT):
         total_male_workforce_percentage_inM = male_workforce_total / maleTotalPopulation
         total_female_workforce_percentage_inF = female_workforce_total / femaleTotalPopulation
 
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("Male workforce total's percentage in total population is: %f \n", total_male_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("Female workforce total's percentage in total population is: %f\n", total_female_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("Together they are: %f \n", total_male_workforce_percentage + total_male_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("based on the data, the percentage of female that chooses to work is %f \n", total_female_workforce_percentage_inF)
         printf("based on the data, the percentage of male that chooses to work is %f \n", total_male_workforce_percentage_inM)
 
@@ -73,13 +73,13 @@ def process1(sheetT):
             PR_female_workforce_total += sheetT.cell(row=x, column=4).value
         PR_total_male_workforce_percentage = PR_male_workforce_total / PR_totalPopulation
         PR_total_female_workforce_percentage = PR_female_workforce_total / PR_totalPopulation
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("PR Male workforce total's percentage in PR total population is: %f \n", PR_total_male_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("PR Female workforce total's percentage in PR total population is: %f\n", PR_total_female_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         printf("Together they are: %f \n", PR_total_male_workforce_percentage + PR_total_male_workforce_percentage)
-        print("-----------------------------------------------------------------")
+        seperator()
         # in the case of PR, the male to choose to work, and the female that chooses to work
         PR_total_male_workforce_percentage_inM = PR_male_workforce_total / PR_maleTotalPopulation
         PR_total_female_workforce_percentage_inF = PR_female_workforce_total / PR_femaleTotalPopulation
@@ -87,16 +87,19 @@ def process1(sheetT):
         printf("based on the data, the percentage of male PR that chooses to work is %f \n", PR_total_male_workforce_percentage_inM)
         # got some interesting finding, the PR work percentage is much higher 5% ish.
         # and there are more female PR choose to work 2%
-        print("-----------------------------------------------------------------")
+        seperator()
         PR_femaleOverTotalPR = sheetT.cell(row=47, column=4).value / PR_totalPopulation
         PR_maleOverTotalPR = 1-PR_femaleOverTotalPR
         printf("just for the information: PR female percentage in total PR population is: %f And for PR male is: %f \n",PR_femaleOverTotalPR, PR_maleOverTotalPR)
-        print("-----------------------------------------------------------------")
+        seperator()
 
 ###########################################################################
 # print helper
 def printf(format, *args):
     sys.stdout.write(format % args)
+
+def seperator():
+    print("-----------------------------------------------------------------")
 
 def main(): # main console
     print("Welcome to Console\n")
