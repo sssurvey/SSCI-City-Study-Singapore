@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="230ae9c9-1037-4b89-a96d-779677230639" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/SmallCalc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainConsole.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainConsole.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmallCalc.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmallCalc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/workBook2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/workBook2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/~$workBook1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/~$workBook2.xlsx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +32,8 @@
       <file leaf-file-name="SmallCalc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SmallCalc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="39">
+              <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -172,14 +174,14 @@
     <frame x="0" y="22" width="1680" height="978" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1720238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1720238" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32964602" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5033186" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40376106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -234,8 +236,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SmallCalc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="39">
+          <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
