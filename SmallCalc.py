@@ -79,6 +79,21 @@ def calcConstructWorkers():
         result_percent = (sheet1.cell(row=10, column=x).value - sheet1.cell(row=11, column=x).value)
         printf("The amount of construction worker is: | %f | and time is: %s \n", result_percent,year)
 
+def workForceDistro():
+    wb1 = openpyxl.load_workbook(
+        'data/foreign-workforce-numbers.xlsx')  # visa//work visa
+    sheet1 = wb1['Sheet1']
+    for x in range(2, 8):  # 2 - 8 from 2012 - 2017
+        year = sheet1.cell(row=2, column=x).value
+        result_percent = (sheet1.cell(row=3, column=x).value / sheet1.cell(row=9, column=x).value)
+        printf("The amount of  EP is: | %f | and time is: %s \n", result_percent,year)
+        result_percent = (sheet1.cell(row=4, column=x).value / sheet1.cell(row=9, column=x).value)
+        printf("The amount of  SP is: | %f | and time is: %s \n", result_percent, year)
+        result_percent = (sheet1.cell(row=5, column=x).value / sheet1.cell(row=9, column=x).value)
+        printf("The amount of  WP is: | %f | and time is: %s \n", result_percent, year)
+        printf("--------------------------|%s|----------------------------------\n", year)
+
+
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -93,6 +108,7 @@ def main():
     compareEmployementLocalVSmigrant()
     calcOfworkVISA()
     calcConstructWorkers()
+    workForceDistro()
 
 
 main()
